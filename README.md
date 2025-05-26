@@ -1,2 +1,5 @@
 # Micromouse
 All code written in C++ to enable a robotic "mouse" to solve a maze.
+Currently the code needs a good bit of work in order to actually solve a maze, depending on individual PCB specifications the motors need to be tuned, the IR sensors need to be tuned and the actual camera settings need to be properly tuned. With all of this tuning the simply algorithm should be able to eventually find its way through a maze.
+
+The maze solving algorithm does need a lot of work, Ideally I will implement a floodfill algorithm to find the center of the maze and then work out back to the start finding the fastest path and then repeat the code once it reaches the start of the maze. Another option as is implemented in the code is to simplify the previous path that was found. This will work but since there is nothing telling the current maze solver where it needs to end up it will just simplify the path to wherever the robot was turned off. 
